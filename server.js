@@ -6,10 +6,6 @@ require('dotenv').config();
 app.use(express.static('public'))
 
 var Twit = require('twit')
-// API_SECRET_KEY = 'BPuWAMwklaldTBgGIQFV7spDpKw3DU9I9ZinKczJ6A1O9MmrvQ'
-// API_KEY = 'M3OJghKzClAWobyz4SHxTyj7Y'
-// ACCESS_TOKEN = '1138593366986383360-kwTZoNhRRu5yiFah6PcGu87Qm9as5C'
-// ACCESS_TOKEN_SECRET = 'uZBJa6Qfuzes8YvyCFWQGbQ6iKKFn61OTEvI4n189tUeC'
  
 var T = new Twit({
   consumer_key:         process.env.API_KEY,
@@ -39,7 +35,6 @@ app.get('/:word', (req, res) => {
                 url: url
             }
             await tweets.push(shortTweet)
-            console.log(tweets)
         if (i >= 20) { 
           res.send(JSON.stringify(tweets))
         }

@@ -10,7 +10,6 @@ document.getElementById("clear").addEventListener("click", clear);
 let ourData = []
 
 function clear() {
-  console.log('CLEARING')
   ourData = [];
   document.getElementById("tweets").innerHTML = ''; 
   document.getElementById("error").innerHTML = ''; 
@@ -21,7 +20,6 @@ function clear() {
 
 async function getTweet (words) {
   
-  console.log('getting tweet')
   await fetch(`http://localhost:5500/${words}`)
       .then(res => res.json())
       .then(data => ourData.push(data))
@@ -50,7 +48,6 @@ form.addEventListener('submit', (e) => {
   document.getElementById("tweets").innerHTML = ''; 
   document.getElementById("error").innerHTML = ''; 
   document.getElementById("stats").innerHTML = ''; 
-  console.log('submitting')
   let words = keywords.value;
   getTweet(words)
 });
