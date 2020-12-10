@@ -7,3 +7,7 @@ that contain the word election.
 
 #### npm install
 #### npm start
+
+Then go to localhost:5500 in the browser.  
+
+***NOTE: you will have to create a .env file in the root with your own Twitter developer keys.***
