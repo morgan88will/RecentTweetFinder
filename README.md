@@ -6,6 +6,8 @@ that contain the word election.
 ## See it live here: 
 https://recent-tweet-finder.herokuapp.com/
 
+Please give it a little time to load. 
+
 ## Setup ,to run locally:
 
 #### npm install
